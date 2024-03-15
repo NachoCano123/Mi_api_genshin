@@ -12,7 +12,7 @@ const PORT= env.PORT || Deno.env.get("PORT") || 3100
 
 if (!MONGO_URL) {
   console.log("No url valida de mongo");
-  Deno.exit(1);
+  throw new Error ("No valido");
 }
 
 try {
